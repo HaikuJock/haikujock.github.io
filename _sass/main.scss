@@ -48,6 +48,12 @@ p {
     line-height: 1.5;
 }
 
+nav {
+    margin: 8px auto 0px auto;
+    width: 600px;
+    line-height: 1.5;
+}
+
 ul {
     margin: 0px auto 8px auto;
     width: 600px;
@@ -61,5 +67,5 @@ ol {
 }
 
 .current {
-    color: green;
-  }
+    color: maroon;
+}
