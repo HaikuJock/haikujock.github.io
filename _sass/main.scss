@@ -1,4 +1,65 @@
+/* Fonts
+/*------------------------------------------------------------*/
+/*@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Mono:400,700");*/
+
+/* Reset
+/* ---------------------------------------------------------- */
+
+html {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: linen;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+}
+
+h1 {
+    color: maroon;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+h2 {
+    color: maroon;
+    margin: 10px auto;
+    width: 600px;
+}
+
+h3 {
+    color: maroon;
+    margin: 16px auto 5px auto;
+    width: 600px;
+}
+
+p {
+    margin: 8px auto 0px auto;
+    width: 600px;
+    line-height: 1.5;
+}
+
+ul {
+    margin: 0px auto 8px auto;
+    width: 600px;
+    line-height: 1.5;
+}
+
+ol {
+    margin: 0px auto 8px auto;
+    width: 600px;
+    line-height: 1.5;
+}
+
 .current {
     color: green;
   }
-  
