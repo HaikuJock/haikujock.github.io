@@ -1,3 +1,6 @@
+---
+author: jock
+---
 The goal for this week was to finish the new LAN game hosting, lobby, joining and leaving.
 
 I begin the week realizing I've not credited Professor Lewis Goldberg for using his work and fix this immediately.  The release pipeline Just Worked and Version 0.2 is available. I contacted Professor Goldberg to apologize for not crediting him and it got me thinking about how to make personality more... personal. In the next month or two I will add the ability for players to enter their own values from the five-factor model for the leader of their clan. The personality test to determine these values is freely available and has the snappy name, IPIP-NEO, go take the test and learn something about yourself! Long-term I'd like to make the test a piece of interactive fiction in the game.
