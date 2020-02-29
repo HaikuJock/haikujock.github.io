@@ -1,0 +1,75 @@
+---
+author: jock
+---
+<ul>
+    <li>Learning from a grand-master of games, <a href="https://www.masterclass.com/classes/will-wright-teaches-game-design-and-theory">Will Wright</a></li>
+    <li>Integrating with <a href="https://www.inklestudios.com/ink/">Ink</a></li>
+    <li>Writing the tutorial and first in-game story</li>
+</ul>
+
+<h2>Detail</h2>
+
+<p>
+    I've started on <a href="https://www.masterclass.com/classes/will-wright-teaches-game-design-and-theory">Will Wright's Masterclass</a> and it's started me off making paper prototypes and doing some thought exercises on design. Look at a chair, what are it's design priorities? Affordance, comfort, aesthetics, durability? This got me thinking about the design priorities for Dwerg Saga. So far, a major priority has been making what the user will spend most of their time doing so simple that the interface is invisible. I have notes from play-test feedback for further improvements but it's come some way since I started. For comparison, I made this video one week after I started, dated 6th January 2018.
+    <div class="logo-container">
+        <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/5nEcxbVSiOg" width="560">
+        </iframe>
+    </div>
+</p>
+
+<p>
+    The most significant criticism the game has received is that it lack's direction; the player doesn't know what to do. Most play-testers figure out the controls and manage to construct four walls and a door. Sometimes this is painful to watch. I want the first in-game story to:
+</p>
+
+<ul>
+    <li>Act as a tutorial for the basic controls</li>
+    <li>Introduce a character that the player can interact with</li>
+    <li>Provide the player with something fun to do that involves directly controlling a Dwerg</li>
+    <li>Vary according to the personality of the clan chief</li>
+</ul>
+
+<p>
+    I was looking after my nephew on Friday and it was good to have a change of scenery. I was able to take a step back and do a bit of research into how the tutorial, and future scripted stories, will work. I want to be able to write and execute interactive-fiction stories without having to run the game. I took a look at a few tools including <a href="https://twinery.org/">Twine</a> and <a href="http://textadventures.co.uk/quest">Quest</a> but settled on <a href="https://www.inklestudios.com/ink/">Inkle's Ink</a>. A big thank you to <a href="https://twitter.com/mrfergusdoyle">Mr Fergus Doyle</a> for introducing me to it. Ink is still in alpha but it ticks a few boxes:
+</p>
+
+<ul>
+    <li>The <a href="https://github.com/inkle/inky">editor</a> is completely separate from the <a href="https://github.com/inkle/ink">engine</a>.</li>
+    <li>It's open-source and being actively developed.</li>
+    <li>It has been used on a number of big <a href="https://www.inklestudios.com/">games</a>.</li>
+    <li>The engine is in C# so it's simple to call functions specific to the game.</li>
+    <li>It allows for very complex flows while still being readable in the editor.</li>
+</ul>
+
+<p>
+    I spent a bit of time figuring out how to integrate, the biggest question being whether stories are executed on all peers or only on the host.
+</p>
+
+<p>
+    By Saturday afternoon I'd settled on executing scripts on all the peers. The main advantage of this approach is that script progress will be more responsive because user input doesn't have to make a round-trip to the server. Another advantage is that I don't have to duplicate all world-changes through the server layer. I put the scripting into a new library that communicates directly with the simulation and user-interface through two new interfaces. This has allowed me to develop how the scripts work independently of the main game and verify how Ink scripts work with short tests. By the end of Saturday I had a tracer; loading the tutorial script for a new player and showing "Hello world!" on the user-interface.
+</p>
+
+<p>
+    Sunday through Wednesday saw me completely ignoring e-mails and social media to focus exclusively on the scripting. I got lucky and nothing important came through but it's not a behaviour I plan on repeating. By the end of Monday I had an agent spawned from the script with specific skills, characteristics, personality and inventory. While moving an agent from the script I got lucky and reproduced an intermittent path-finding bug that had appeared in play-tests. It turned out that even the smallest of water flows was causing path-finding to fail so I separated small water-flows from ones that actually change navigation. This had the side-effect of improving performance. Nice.
+</p>
+
+<p>
+    On Tuesday I improved the script-panel interface, enabled the making of choices, continued the script when the agent finished moving and showed the speaker's image. Much of Wednesday was spent travelling but I managed to spend the morning refactoring (I'd over-engineered the parsing of custom script commands) and in the afternoon I continued writing the tutorial in the Ink editor. The <a href="https://github.com/inkle/inky/releases/tag/0.11.0">Ink editor</a> is great to work with because it runs the script live and allows backtracking so there's a quick feedback loop that doesn't require running the game. This is a big win for me as it allows me to develop stories without thinking about the implementation details. Long term, it will allow a script-writer to work independent of the game and it opens up the possibility of user-created stories.
+</p>
+
+<p>
+    For the next week, I'll be continuing with the tutorial, merging the chop-trees and harvest tools and showing explanations of each of the user-interface elements. It's Christmas and I'll be visiting with family and friends so don't expect too much from me for the next couple of weeks.
+</p>
+
+<h2>First steps in the first tutorial and story</h2>
+<p>
+    <div class="logo-container">
+        <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/cIxaO2zk8vQ" width="560">
+        </iframe>
+    </div>
+</p>
+<p>
+    Integrated with <a href="https://www.inklestudios.com/ink/">Inkle's Ink</a> and running in a single-player game.
+</p>
+<p>
+    Happy holidays!
+</p>

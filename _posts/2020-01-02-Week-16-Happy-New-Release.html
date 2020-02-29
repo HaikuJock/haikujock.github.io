@@ -1,0 +1,87 @@
+---
+author: jock
+---
+<ul>
+    <li>Four-month retrospective</li>
+    <li>Continuing with first tutorial</li>
+    <li>Buttery smooth scroll and zoom</li>
+    <li>Release 0.6</li>
+</ul>
+
+<p>
+    Happy New Year dear reader! I hope this year brings you joy, happiness and fulfilment.
+</p>
+<p>
+    This week marks four months of my Patreon campaign, so time for a retro-retro-retrospective. 
+</p>
+<h2>What went well?</h2>
+<p>
+    I learnt a lot about AWS and produced a platform that runs games specific to a user's location. Multiple users can play in the same world when they are within about a square mile of each other. Worlds persist and users returning to the same location will be able to continue playing in that world.
+</p>
+<p>
+I maintained a steady level of productivity, releasing monthly builds and weekly development logs. Barring one occasion of feeling burnt out and the painful story-writing attempts, I still feel positive and I'm eager to continue.
+</p>
+<p>
+I got myself out to numerous game development and creatives' meetups. I've met a number of interesting people and expanded my social network. I've done a number of play-tests, taking notes without prompting or guiding.
+</p>
+<p>
+I increased my social-media presence, although that's not hard to do when one is starting from virtually zero.
+</p>
+<p>
+My physical health has improved. It's not something I've been measuring but friends and family have commented positively on my weight loss. I put this down to my daily Tai Chi practice and more healthy eating.
+</p>
+<p>
+I'm the least qualified to comment objectively on my mental health :-). Inevitably long periods of being alone leads to negative thoughts. However I feel more conscious of my thoughts and more able to dismiss negativity. Again, I think Tai Chi helps here but the scope of this project is so large that it keeps me occupied and I enjoy thinking about it.
+</p>
+<h2>What can I improve?</h2>
+<p>
+The cloud platform is an achievement but what difference does it make for the user? Almost nothing. The chance of encountering another player within a mile is negligible. The only attraction is in making one's mark but there's no guarantee that mark won't be erased by another. Action: No more cloud development until the game is fun to play.
+</p>
+<p>
+There aren't enough hours in the day. Action: Try slowly reducing the amount of time I sleep and make up for it with short meditation sessions during the day.
+</p>
+<p>
+I attended a <a href="https://techmeetup.co.uk/edinburgh.html">Tech Meetup</a> talk on continuous delivery feeling somewhat smug about my build pipelines. Then it occurred to me that the final step in the process - delivering the product to the customer - is terrible. Action: Investigate getting the app on the Windows and Mac stores.
+</p>
+<p>
+Although I've made new connections I've not been good at following up and maintaining them. Action: More pro-active social media and taking greater interest in what others are doing.
+</p>
+<p>
+Apart from weekly posts and monthly releases I've not asked anything of my patrons. I don't want to waste people's time but I shouldn't be afraid to ask for help. Action: Once I have a build that is fun to play, make a questionnaire and ask my patrons to play the game and fill in the questionnaire.
+</p>
+<p>
+I have no patrons that are not friends or family.  Action: Once I have a build that is fun to play, start marketing more aggressively. Grrrrr :-) Spend some money on marketing.
+</p>
+<p>
+Making a release could be streamlined. Action: Have one place for the build version and make a script that updates all the necessary files.
+</p>
+<h2>This Week</h2>
+<p>
+This week I've continued with the tutorial; trying to reduce what is explained to the essentials, adding in commands to wait for the player to do things and saving and restoring script state. I finished changing the camera to being pixel, rather than tile, accurate. The video above shows how buttery smooth it is on the left compared to the janky version on the right.
+</p>
+<p>
+I had one play-test of the new tutorial and gained two very useful insights. The user's model of the world was vertically inverted; they thought the high terrain was down low and attempted to mine into "Open Space" which appeared to them like solid rock. Looking over previous play-test notes I found another user had tried to mine over a river in the same way. This is a problem with the darkening of terrain below when a tool is in use. I think the way to fix this is to desaturate instead of darkening levels below. The second insight was the user attempting to mine open terrain. I've seen other user's try this and I'm going to experiment with the mine tool being context-sensitive so that mining on open terrain mines a staircase down into the ground.
+</p>
+<h2>Release 0.6</h2>
+<div class="logo-container">
+    <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/BRsPDirpBYM" width="560">
+    </iframe>
+</div>
+<ul>
+ <li>The start of the first tutorial</li>
+ <li>Buttery smooth scrolling and zooming</li>
+ <li>Improvements to navigation around flowing water</li>
+ <li>Harvest and Chop-Trees tools have been combined</li>
+</ul>
+<p>
+The tutorial will currently only work in local games. A future release will have the tutorial and other scripted stories working in networked and cloud games.
+</p>
+<p>
+This build is available for $3-tier patrons from <a href="https://haikuinteractive.itch.io/dwerg-saga/patreon-access">itch.io</a>.
+</p>
+<p>
+In the coming week I will be continuing with the tutorial, adding more story and finding a balance between explaining all controls and explaining enough so that users can enjoy discovering the others themselves.
+</p>
+<p>
+If you try the new tutorial do let me know how you get on, your feedback is much appreciated and the best way I can improve this game.
+</p>

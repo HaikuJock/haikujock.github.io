@@ -1,0 +1,54 @@
+---
+author: jock
+---
+<ul>
+    <li>Context-sensitive tools FTW</li>
+    <li>Reflections on testing</li>
+    <li>View Modes, not View Tools</li>
+    <li>Refining my pitch</li>
+</ul>
+
+<h2>Detail</h2>
+<p>
+In play-tests users always try to use the Mine Tool on flat terrain and expect it to dig a hole into the earth. So that's what I've been mostly working on this week. By Tuesday morning I was happy with the new context-sensitive mining tool:
+</p>
+<div class="logo-container">
+    <iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/s74gGaoICuk" width="560">
+    </iframe>
+</div>
+<ul>
+    <li>It digs tunnels when started in solid terrain.</li>
+    <li>It removes the tops and bottoms of stairs or ramps when started on such.</li>
+    <li>It removes floors when started on a floor with no solid terrain beneath.</li>
+    <li>It digs pits with ramps around the edges when started on flat terrain with solid terrain beneath.</li>
+</ul>
+<p>
+This last feature was harder than expected and led me to question whether my game "unit-tests" are testing too much. Most of these tests create a 3x3x3 world, set up some initial state, run the update a number of times and then assert some new state. The problem with such tests is that they can be brittle. For example, all my tests that assumed a Dwerg would eat something after a given duration, broke when I added the thirst need which must be satisfied before hunger. I had convinced myself that this brittleness is an advantage because such tests can find unforeseen problems arising from the interplay of mechanics. This conviction was shaken by pit-digging and I eventually refactored out the piece of logic that figured out the inverted-pyramid of prioritised jobs. I'm not going to abandon my testing strategy but I am going to start measuring the value of tests. When a test breaks revealing something unforeseen I will count that as a positive and when a test breaks without revealing anything I will count that as a negative. 
+</p>
+<p>
+    Making the mining tool context-sensitive gave me an idea to do the same for the build tools. A few weeks ago I watched a user build some stairs up to a new level and then lay down a floor. Unfortunately the area of floor they defined covered the top of the stairs and so broke the stairs. I think the idea of 'if you start on a tile you expect the tool to affect that tile' is a decent rule of thumb. At GameDevEd on Tuesday evening the new mining tool was used effectively by two new testers so I'm going ahead with making the build tools work in a similar fashion.
+</p>
+<p>
+    I have the single-level view-tool working but it makes me wonder if it belongs on the toolbar since it is now a mode that affects all other tools. A previous play-tester commented that having zoom-in and out buttons would be helpful and perhaps the view-mode could sit alongside them. 
+</p>
+<div class="logo-container">
+    <img class="logo" src="/assets/img/ViewOnlyOneLayer.jpg" alt="View Only One Layer">
+</div>
+<p>
+This way of switching view-modes is tedious because you have to switch from your current tool to the desired view mode and then back to the tool. A new UI element for view-mode is the next piece of work. I have plans for two other view modes in the future.
+</p>
+<p>
+I watched the UK Games Fund webinar on Monday and started filling in the application form and writing a script for my video-pitch. This is an opportunity to evolve my 100-word pitch and a chance to think about the long-term future. This is the latest pitch, let me know what you think.
+</p>
+<p>
+"If you haven’t heard of ‘Dwarf Fortress’, ‘Dwerg Saga’ is best described as a combination of ‘The Sims’ and ‘Minecraft’. It aims to create dramatic and believable stories from the interactions between agents, their environment and what they build. The personality of the player’s avatar is determined by the player’s scores on a personality test. The game aspires to teach players something about themselves by involving their avatar in dramatic situations. Players can play locally, on a private server and in the persistent, real-world mapped, shared world. Players in each others vicinity play together in the shared world."
+</p>
+<p>
+I will be attending the Creative Bridges course on Thursdays so I'm shifting these posts to Wednesday from this week on.
+</p>
+<p>
+For the next week I will be refactoring the job system, finishing up the new build tool, refactoring the mine tool (I found a simpler way to achieve context-sensitivity), adding the view-mode UI element, refining the current tutorial and starting on something to challenge the player in the next stage of the tutorial.
+</p>
+<p>
+Happy mining!
+</p>
