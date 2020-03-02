@@ -1,6 +1,12 @@
 ---
 author: jock
 ---
+* Dwerg individual stories
+* Personalities, Big-5 model and musings on long-term possibilities
+* Mac version works with cloud service
+* Hunter Dwerg sprite in progress
+* Start on dedicated server
+
 ![Story Tab on Legend](/assets/img/ScreenshotStory.png "Story Tab on Legend")
 
 When you play the game now you will see the Story tab on the user-interface that pops down at the start of the game. Story events occur for the mundane tasks that Dwergs perform and for conversation statements. There are currently 20 statements a Dwerg can make in a conversation such as greetings, complaints, jokes and insults. What a Dwerg says in a conversation is determined by rules based on their needs, preferences, knowledge and relationships with other participants. The next piece of work in this part of the game is to have personality also play a part.
