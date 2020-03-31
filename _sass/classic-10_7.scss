@@ -1,6 +1,7 @@
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */
 #mc_embed_signup form {
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     display: inline-block;
     position: relative;
     text-align: left;

@@ -35,36 +35,37 @@ h1 {
 h2 {
     color: maroon;
     margin: 10px auto;
-    width: 600px;
+    max-width: 600px;
 }
 
 h3 {
     color: maroon;
     margin: 16px auto 5px auto;
-    width: 600px;
+    max-width: 600px;
 }
 
 p {
     margin: 8px auto 4px auto;
-    width: 600px;
+    max-width: 600px;
     line-height: 1.5;
+    width: auto;
 }
 
 nav {
     margin: 8px auto 0px auto;
-    width: 600px;
+    max-width: 600px;
     line-height: 1.5;
 }
 
 ul {
     margin: 0px auto 8px auto;
-    width: 600px;
+    max-width: 600px;
     line-height: 1.5;
 }
 
 ol {
     margin: 0px auto 8px auto;
-    width: 600px;
+    max-width: 600px;
     line-height: 1.5;
 }
 
