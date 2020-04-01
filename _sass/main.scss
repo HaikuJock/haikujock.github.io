@@ -18,12 +18,20 @@ body {
 
 .logo-container {
     text-align: center;
+    max-width: 100%;
+    width: auto;
 }
 
 .logo {
     display: inline-block;
-    max-width:  100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
 }
 
 h1 {
