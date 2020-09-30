@@ -17,3 +17,5 @@ I took the weekend off and came to the conclusion on Monday that I don't have to
 In the early hours of Sunday morning I woke with an idea to make a tablet application that would allow changing in-game variables with sliders while the game is running. The idea is that some constants are best determined by playing the game and tweaking the values by feeling. I've decided to spend the next week on this rather than the bronze-working.
 
 Late on Monday I enjoyed the streamer [thatguybgreen](https://www.twitch.tv/thatguybgreen) try out some more games from itch.io's bundle for racial equality. This streamer is going through every game in this bundle, check out his [playlist on YouTube](https://www.youtube.com/playlist?list=PLLbnc3fK78bMEMzTNNAqCWbt_RUI39VoB).
+
+Then jekyll failed...
