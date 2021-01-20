@@ -13,7 +13,7 @@ author: jock
 **Butchery and Tanning video**
 [![Butchery and Tanning](http://img.youtube.com/vi/qYb-n_m-XXo/0.jpg)](https://youtu.be/qYb-n_m-XXo)
 
-This week I bring you a rawer account of what I've been up to, it's less filtered, there's a lot of thinking out loud and probably too much techno-babble. Love it or loath it? Let me know. ;-)
+This week I bring you a rawer account of what I've been up to, it's less filtered, there's a lot of thinking out loud and probably too much techno-babble. Love it or loathe it? Let me know. ;-)
 
 I started on Thursday with considering how butchering deer corpses for leather and meat will work. Ugh. Currently, there are only Dwerg corpses that are just items. There's a problem with this in that when a Dwerg dies, their story is lost, you can't even find out how they died. There's nothing in a corpse-item to say what kind of corpse it is. I came up with a couple of ways to resolve this. 
 
